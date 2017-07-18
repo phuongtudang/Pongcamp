@@ -1,20 +1,19 @@
 <% include ../partials/header %>
 
-<div class="container">
+<header class="jumbotron">
+    <div class="container">
+        <h1>Welcome to PongCamp!</h1>
+        <p>View our hand-picked campgrounds from all over the world</p>
+        <p>
+            <a class="btn btn-warning btn-default" href="/campgrounds/new"><i class="fa fa-plus" aria-hidden="true"></i> Add new campground here</a>
+        </p>
+    </div>    
+</header>
 
-    <header class="jumbotron">
-        <div class="container">
-            <h1>Welcome to PongCamp!</h1>
-            <p>View our hand-picked campgrounds from all over the world</p>
-            <p>
-                <a class="btn btn-warning btn-default" href="/campgrounds/new"><i class="fa fa-plus" aria-hidden="true"></i> Add new campground here</a>
-            </p>
-        </div>    
-    </header>
-    
+<div class="container">
     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
         <div class="col-lg-12">
-            <!--<h3>Our most popular campgrounds!</h3>-->
+            <h3>Our most popular campgrounds</h3>
             <% campgrounds.forEach(function(campground){ %>
                 <div class="col-md-3 col-sm-6">
                     <div class="thumbnail">
