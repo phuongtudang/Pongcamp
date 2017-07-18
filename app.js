@@ -9,6 +9,7 @@ var express     = require("express"),
     Campground  = require("./models/campground"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
+    moment      = require("moment"),
     seedDB      = require("./seeds")
     
 //requiring routes
