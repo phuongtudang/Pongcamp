@@ -35,4 +35,21 @@ h3{
 
 #leftcolumn{
     margin-top: 20px;
+} 
+
+fieldset{
+    margin: 30px auto;
+    width: 50%;
+}
+
+#textinput{
+    width: 150%;
+}
+
+
+.alert{
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0;
 }

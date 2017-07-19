@@ -74,7 +74,8 @@
         </div>
     </div>
 </nav>
-<div class="container">
+
+<div id="alert-box">
     <% if(error && error.length >0){ %>
     <div class="alert alert-danger" role="alert"><%= error %></div>
     <% } %>
@@ -82,4 +83,3 @@
     <div class="alert alert-success" role="alert"><%= success %></div>
     <% } %>
 </div>
-
