@@ -2,7 +2,10 @@ var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
 var middleware = require("../middleware");
-var moment = require("moment")
+var moment = require("moment");
+var googleMapsClient = require('@google/maps').createClient({
+  key: 'AIzaSyAS-a2O4smwBLhq2L4UEqORW2NRvnasuhI'
+});
 
 //INDEX - show all campgrounds
 router.get("/", function(req, res){
