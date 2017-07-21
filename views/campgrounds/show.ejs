@@ -9,6 +9,9 @@
                 <li class="list-group-item">Info 2</li>
                 <li class="list-group-item">Info 3</li>
             </div>
+            <div class="thumbnail">
+                <div id="map"></div>
+            </div>
         </div>
         <div class="col-md-9">
             <div class="thumbnail">
@@ -64,5 +67,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 40.714232, lng: -73.9612889},
+        zoom: 13
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3AC6WEEZVQiqTVJsfbObHG-Pj6wwQaIc&callback=initMap" async defer></script>    
 
 <% include ../partials/footer %>

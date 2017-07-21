@@ -53,3 +53,7 @@ fieldset{
     padding: 10px;
     border-radius: 0;
 }
+
+#map {
+  height: 250px;
+}
