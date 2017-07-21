@@ -71,8 +71,8 @@ router.get("/:id", function(req, res){
                 } else {
                     console.log(err);
                     var locationdata = {
-                                    lat: 45.55793,
-                                    lng: -73.5933
+                                    lat: -41.2808564,
+                                    lng: 174.7512451
                     };
                     res.render("campgrounds/show", {campground: foundCampground, moment: moment, locationdata: data});    
                 }
