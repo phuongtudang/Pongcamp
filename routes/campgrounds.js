@@ -57,19 +57,19 @@ router.get("/:id", function(req, res){
             console.log(err);
         } else {
             console.log(foundCampground);
-            googleMapsClient.geocode({
-                address: foundCampground.location
-            }, function(err, response) {
-                if (!err) {
-                    var data =  {lat: response.json.results[0].geometry.location.lat,
-                                lng: response.json.results[0].geometry.location.lng};
-                    console.log(data);
-                    //render show template with that campground
-                    res.render("campgrounds/show", {campground: foundCampground, moment: moment, locationdata: data});
-                }
-            });
-            // //render show template with that campground
-            // res.render("campgrounds/show", {campground: foundCampground, moment: moment});
+            // googleMapsClient.geocode({
+            //     address: foundCampground.location
+            // }, function(err, response) {
+            //     if (!err) {
+            //         var data =  {lat: response.json.results[0].geometry.location.lat,
+            //                     lng: response.json.results[0].geometry.location.lng};
+            //         console.log(data);
+            //         //render show template with that campground
+            //         res.render("campgrounds/show", {campground: foundCampground, moment: moment, locationdata: data});
+            //     }
+            // });
+            //render show template with that campground
+            res.render("campgrounds/show", {campground: foundCampground, moment: moment});
         }
     });
 });
