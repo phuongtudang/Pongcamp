@@ -12,6 +12,7 @@
             <div class="thumbnail">
                 <div id="map"></div>
             </div>
+            
         </div>
         <div class="col-md-9">
             <div class="thumbnail">
@@ -30,6 +31,10 @@
                     </form>
                     <% } %>
                 </div>
+                
+            </div>
+            <div class="thumbnail">
+                <iframe id="forecast_embed" type="text/html" frameborder="0" height="220" width="100%" src="https://forecast.io/embed/#lat=<%=locationdata.lat%>&lon=<%=locationdata.lng%>&units=uk"></iframe>             
             </div>
             <div class="well" style="margin-bottom: 70px">
                 <div class="text-right">
@@ -51,6 +56,7 @@
                                 </form>
                             <% } %>
                         </div>
+                        
                     </div>
                 <% }) %>
                 
@@ -78,7 +84,8 @@
         });
     }
 </script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3AC6WEEZVQiqTVJsfbObHG-Pj6wwQaIc&callback=initMap" async defer></script>    -->
+
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyD3AC6WEEZVQiqTVJsfbObHG-Pj6wwQaIc&callback=initMap" type="text/javascript"></script>
+
 
 <% include ../partials/footer %>
