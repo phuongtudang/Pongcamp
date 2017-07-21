@@ -19,7 +19,7 @@
                 <div class="caption-full">
                     <h4 class="pull-right">$<%= campground.price%>/night</h4>
                     <h4><a><%= campground.name%></a></h4>
-                    <p><%= campground.location%></p>
+                    <p><i><%= campground.location%></i></p>
                     <p><%= campground.description%></p>
                     <p><%= moment(campground.created).fromNow()%></p>
                     <p><em>Submitted by <%= campground.author.username %></em></p>
@@ -73,11 +73,12 @@
     var map;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 40.714232, lng: -73.9612889},
+        center: {lat: <%= locationdata.lat %>, lng: <%= locationdata.lng %>},
         zoom: 13
         });
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3AC6WEEZVQiqTVJsfbObHG-Pj6wwQaIc&callback=initMap" async defer></script>    
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3AC6WEEZVQiqTVJsfbObHG-Pj6wwQaIc&callback=initMap" async defer></script>    -->
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyD3AC6WEEZVQiqTVJsfbObHG-Pj6wwQaIc&callback=initMap" type="text/javascript"></script>  
 
 <% include ../partials/footer %>
