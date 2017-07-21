@@ -68,6 +68,7 @@ router.get("/:id", function(req, res){
                     res.render("campgrounds/show", {campground: foundCampground, moment: moment, locationdata: data});
                 } else {
                     console.log(err);
+                    res.render("campgrounds/show", {campground: foundCampground, moment: moment, locationdata: data});
                 }
             });
         }    
