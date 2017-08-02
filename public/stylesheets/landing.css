@@ -12,9 +12,10 @@ body {
 
 #landing-header h1 {
   color: #fff;
-  font-family: "Permanent Marker";
+  font-family: "Patrick Hand SC";
   font-weight: 700;
-	font-size: 5em;
+	font-size: 8em;
+	margin: 0 auto;
 	text-align: center;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                  0px 8px 13px rgba(0,0,0,0.1),
